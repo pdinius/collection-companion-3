@@ -1,0 +1,61 @@
+@use "../../variables.scss" as *;
+
+.filterControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filterRow {
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 500px;
+  background: rgb(255 255 255 / 0.5);
+  max-width: calc(100% - 4rem);
+  margin-block: 1rem;
+}
+
+.caret {
+  height: 1rem;
+}
+
+.playerCountInput,
+.queryInput {
+  border-radius: 999px;
+  border: 1px solid #555555;
+}
+
+.playerCountInput {
+  width: 1rem;
+  text-align: center;
+  padding: 0.25rem 0.75rem;
+}
+
+.searchQueryContainer {
+  position: relative;
+}
+
+.magnifyingGlass {
+  fill: rgb(133, 131, 138);
+  position: absolute;
+  height: 0.75rem;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  @media (max-width: $sm) {
+    right: 0.75rem;
+  }
+}
+
+.queryInput {
+  padding: 0.25rem 1.5rem 0.25rem 0.75rem;
+}

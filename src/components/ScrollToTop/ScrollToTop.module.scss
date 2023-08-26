@@ -1,0 +1,32 @@
+.container {
+  transition: opacity 0.2s linear;
+}
+
+.scrollToTop {
+  box-shadow: 0 0 100px white;
+  --size: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgb(255 255 255 / 0.3);
+  opacity: 0.3;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-content: center;
+  border-radius: 0.25rem;
+  transition: opacity 0.05s linear;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.arrow {
+  height: calc(var(--size) * 0.75);
+  fill: white;
+}

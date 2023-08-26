@@ -1,0 +1,93 @@
+@use "./variables.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: clip;
+  transition: max-height 0.3s ease;
+  width: 100%;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.shelfContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locationLabel {
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-block: 1rem;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  line-height: 0;
+}
+
+.shelfNumber {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  font-family: "Rubik";
+  font-weight: bold;
+  top: 0.5rem;
+  left: 1rem;
+  background: rgb(255 255 255 / 0.2);
+  border-radius: 9999px;
+  height: 2rem;
+  width: 2rem;
+
+  @media (max-width: $sm) {
+    position: revert;
+    margin-bottom: 1rem;
+  }
+}
+
+.oneShelfContainer {
+  --margin: 4rem;
+  position: relative;
+  display: grid;
+  border-radius: 0.5rem;
+  background: rgb(255 255 255 / 0.1);
+  left: var(--margin);
+  padding: 1rem;
+
+  @media (max-width: $sm) {
+    left: 0;
+  }
+}
+
+.imageShelf {
+  grid-template-columns: repeat(auto-fill, $imageWidth);
+  max-width: calc(100% - 2 * var(--margin));
+
+  @media (max-width: $sm) {
+    max-width: calc(100% - 2rem);
+  }
+}
+
+.textShelf {
+  width: calc(100% - 2 * var(--margin));
+
+  @media (max-width: $sm) {
+    width: calc(100% - 2rem);
+  }
+}
+
+.hide {
+  @media (max-width: $sm) {
+    display: none;
+  }
+}

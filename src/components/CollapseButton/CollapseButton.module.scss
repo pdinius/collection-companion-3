@@ -1,0 +1,22 @@
+@use "../../variables.scss" as *;
+
+.container {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.plus,
+.minus {
+  fill: $light-grey;
+  height: 1.5rem;
+  position: absolute;
+  top: -0.75rem;
+  right: 0;
+  transition: opacity 0.2s ease, rotate 0.4s ease;
+}

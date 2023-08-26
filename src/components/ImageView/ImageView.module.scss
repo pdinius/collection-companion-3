@@ -1,0 +1,32 @@
+@use "../../variables.scss" as *;
+
+.container {
+  position: relative;
+  width: $imageWidth;
+  height: $imageWidth;
+  display: grid;
+  place-content: center;
+}
+
+.gameImage {
+  max-width: calc($imageWidth - 20px);
+  max-height: calc($imageWidth - 20px);
+  border-radius: 0.25rem;
+}
+
+.bestWith {
+  border: 2px solid white;
+  box-shadow: 0 0 5px white;
+}
+
+.bestWithBubble {
+  position: absolute;
+  bottom: 1rem;
+  white-space: nowrap;
+  font-family: "Rubik";
+  background: rgb(18, 50, 77);
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  border: 1px solid white;
+  font-weight: 400;
+}
