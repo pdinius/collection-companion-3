@@ -1,6 +1,7 @@
 export const groupBy = <T>(arr: Array<T>, key: keyof T) => {
   return arr.reduce((a: { [key: string]: Array<T> }, b) => {
-    const val = b[key] as string;
+    const val = b[key];
+    if (typeof val !== "string") throw Error("This is illegal"); 
     if (a[val] === undefined) a[val] = [];
     a[val].push(b);
     return a;
