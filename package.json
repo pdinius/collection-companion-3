@@ -3,17 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "npx http-server ./dist",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve build -s -n -L -p $PORT"
   },
   "dependencies": {
     "bgg-wrapper": "^1.1.5",
     "react": "^18.0.0",
     "react-collapsed": "^4.0.4",
     "react-dom": "^18.0.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
